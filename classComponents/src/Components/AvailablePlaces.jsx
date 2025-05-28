@@ -5,7 +5,7 @@ import Places from './Places.jsx';
 export default function AvailablePlaces({ onSelectPlace }) {
   const [isFetching, setIsFetching] = useState(false);
   const [availablePlaces, setAvailablePlaces] = useState([]);
-
+  //comment on the fetching data
   useEffect(() => {
     async function fetchPlaces() {
       setIsFetching(true);
