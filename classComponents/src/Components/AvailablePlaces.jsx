@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Places from "./Places.jsx";
-import Error from '../Components/Error.jsx'
+import Error from "../Components/Error.jsx";
 import { sortPlacesByDistance } from "../loc.js";
 import { fetchAvailablePlaces } from "../http.js";
 
@@ -9,7 +9,6 @@ export default function AvailablePlaces({ onSelectPlace }) {
   const [availablePlaces, setAvailablePlaces] = useState([]);
 
   const [error, setError] = useState();
-  //comment on the fetching data
   useEffect(() => {
     async function fetchPlaces() {
       setIsFetching(true);
@@ -32,7 +31,6 @@ export default function AvailablePlaces({ onSelectPlace }) {
             error.message || "could not fetch places , please try again later.",
         });
         setIsFetching(false);
-
       }
     }
 
